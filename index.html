@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <!-- Main App -->
+    <main class="weather-app">
+        <!-- Search -->
+        <header class="search-section">
+            <div class="search-box">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+                <input
+                    type="text"
+                    class="city-input"
+                    placeholder="Enter City">
+                <button class="search-btn">
+                    Search
+                </button>
+            </div>
+            <span class="show-error"></span>
+        </header>
+
+        <!-- Current Weather -->
+        <section class="weather-card">
+            <!-- Location -->
+            <div class="location-section">
+                <div class="location-left">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <div>
+                        <h2 class="city-txt">
+                            Delhi
+                        </h2>
+                        <p class="date-txt">
+                            Thursday, 09 July 2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather -->
+            <div class="weather-main">
+                <img
+                    src="./assets/weather/clear.svg"
+                    class="weather-status-img"
+                    alt="Weather">
+                <h1 class="temp-txt">
+                    26°
+                </h1>
+                <h3 class="condition-txt">
+                    Light Rain
+                </h3>
+                <p class="feels-like">
+                    Feels Like 28°
+                </p>
+            </div>
+        </section>
+
+        <!-- Weather Highlights -->
+        <section class="highlights">
+            <h2>
+                Today's Highlights
+            </h2>
+            <div class="highlight-grid">
+                <!-- Humidity -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        water_drop
+                    </span>
+                    <div>
+                        <p>
+                            Humidity
+                        </p>
+                        <h3 class="humidity-value">
+                            75%
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Wind -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        air
+                    </span>
+                    <div>
+                        <p>
+                            Wind Speed
+                        </p>
+                        <h3 class="wind-value">
+                            10 km/h
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Pressure -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        speed
+                    </span>
+                    <div>
+                        <p>
+                            Pressure
+                        </p>
+                        <h3 class="pressure-value">
+                            1013 hPa
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Visibility -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        visibility
+                    </span>
+                    <div>
+                        <p>
+                            Visibility
+                        </p>
+                        <h3 class="visibility-value">
+                            10 km
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- UV -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        sunny
+                    </span>
+                    <div>
+                        <p>
+                            UV Index
+                        </p>
+                        <h3 class="uv-value">
+                            5
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Sunrise -->
+                <div class="highlight-card">
+                    <span class="material-symbols-outlined">
+                        wb_twilight
+                    </span>
+                    <div>
+                        <p>
+                            Sunrise
+                        </p>
+                        <h3 class="sunrise-value">
+                            06:04 AM
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hourly Forecast -->
+        <section class="hourly-section">
+            <div class="section-title">
+                <h2>
+                    Today's Forecast
+                </h2>
+            </div>
+            <div class="hourly-container">
+                <!-- JS -->
+            </div>
+        </section>
+
+        <!-- Weekly Forecast -->
+        <section class="forecast-section">
+            <div class="section-title">
+                <h2>
+                    7-Day Forecast
+                </h2>
+            </div>
+            <div class="forecast-container">
+                <!-- JS -->
+            </div>
+        </section>
+    </main>
+                <!-- Loading Screen -->
+        <section class="loading-container hidden">
+            <div class="loader">
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+                <div class="loader-circle"></div>
+            </div>
+            <h3>Fetching Weather...</h3>
+        </section>
+
+        <!-- No Data Screen -->
+        <section class="no-data hidden">
+            <img src="./assets/icons/search.svg" alt="Search">
+            <h2>Search a City</h2>
+            <p>
+                Enter a city name to view the current weather,
+                today's forecast and the 7-day forecast.
+            </p>
+        </section>
+
+        <!-- Error Screen -->
+        <section class="error-container hidden">
+            <img src="./assets/icons/error.svg" alt="Error">
+            <h2>City Not Found</h2>
+            <p>
+                Please check the spelling and try again.
+            </p>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
