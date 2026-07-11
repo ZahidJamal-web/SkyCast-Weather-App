@@ -621,26 +621,29 @@ TEXT SELECTION
 }
 
 /*==============================
-LOADING SCREEN
+ingING SCREEN
 ==============================*/
-.loading-container{
+.loading-container,
+.no-data,
+.error-container{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(7,22,49,.45);
-backdrop-filter:blur(8px);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-gap:20px;
+text-align:center;
+background:rgba(7,22,49,.55);
+backdrop-filter:blur(10px);
 z-index:9999;
+padding:20px;
 }
 
-.loading-container.hidden{
-display:none;
+.hidden{
+display:none !important;
 }
 
 .loader {
@@ -682,18 +685,7 @@ display:none;
 /*==============================
 NO DATA
 ==============================*/
-.no-data,
-.error-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(18px);
-  border-radius: 35px;
-}
+
 .no-data img,
 .error-container img {
   width: 170px;
